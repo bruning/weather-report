@@ -1,5 +1,5 @@
 require 'httparty'
-MY_KEY = "80adb82853b27e4d"
+MY_KEY = YAML.load_file('config.yml')['my_key']
 zip = "27701"
 
 puts "Enter a ZIP code to find its current weather conditions:"

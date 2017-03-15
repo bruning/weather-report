@@ -6,7 +6,7 @@ class WeatherReport
 
   MY_KEY = YAML.load_file('config.yml')['my_key']
 
-  def initialize(zip:)
+  def initialize(zip:) #remove : to require ZIP
     @zip = zip
   end
 
