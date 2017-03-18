@@ -48,7 +48,6 @@ class WeatherReport
 
   def report
     puts "Here are the current conditions for #{zip} (#{observation_location})"
-    "#{current_weather} | Feels like #{current_feels_like}°F | Wind #{current_wind_mph} MPH | #{current_humidity} Humidity | Precipitation over last hour: #{current_precipitation} Inches"
     "#{current_weather} and it feels like #{current_feels_like}°F with #{current_wind_mph} MPH winds. | #{current_humidity} Humidity | Precipitation over last hour: #{current_precipitation} Inches"
   end
 end
