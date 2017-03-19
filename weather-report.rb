@@ -1,12 +1,12 @@
 require 'httparty'
 require 'yaml'
 
-class WeatherReport
+class Report
   attr_reader :zip
 
   MY_KEY = YAML.load_file('config.yml')['my_key']
 
-  def initialize(zip:) #remove : to require ZIP
+  def initialize(zip) #remove : to require ZIP
     @zip = zip
   end
 
@@ -48,6 +48,6 @@ class WeatherReport
 
   def report
     puts "Here are the current conditions for #{zip} (#{observation_location})"
-    "#{current_weather} and it feels like #{current_feels_like}°F with #{current_wind_mph} MPH winds. | #{current_humidity} Humidity | Precipitation over last hour: #{current_precipitation} Inches"
+    puts "#{current_weather} and it feels like #{current_feels_like}°F with #{current_wind_mph} MPH winds. | #{current_humidity} Humidity | Precipitation over last hour: #{current_precipitation} Inches"
   end
 end
