@@ -18,15 +18,21 @@ class Alert
     @alert_response ||= HTTParty.get("http://api.wunderground.com/api/#{MY_KEY}/alerts/q/#{zip}.json")
   end
 
-  def descriptions
-    alert_response["alerts"].each{|alert| puts alert["description"]}
+  def alert_array
+    alert_response["alerts"]
   end
 
-  def expiration
-    alert_response["alerts"].each{|alert| puts alert["expires"]}
+  def alert_count
+    alert_array.count
   end
 
   def alerts
-    puts "Here are the active alerts for #{zip}:"
+    number = alert_count == 1 ? "is one weather alert for #{zip}:" : "are #{hurricane_count} active weather alerts for #{zip}."
+    puts "There #{number}"
+    if alert_count > 0
+      (0..alert_count - 1).each do |i|
+        puts "** Alert ** #{alert_array[i]["description"]} expires at #{alert_array[i]["expires"]}"
+      end
+    end
   end
 end

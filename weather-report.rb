@@ -48,6 +48,9 @@ class Report
 
   def report
     puts "Here are the current conditions for #{zip} (#{observation_location})"
-    puts "#{current_weather} and it feels like #{current_feels_like}°F with #{current_wind_mph} MPH winds. | #{current_humidity} Humidity | Precipitation over last hour: #{current_precipitation} Inches"
+    precip = current_precipitation.to_i > 0 ? "Precipitation over last hour: #{current_precipitation} Inches" : "No precipitation in the last hour"
+    wind = current_wind_mph.round > 2 ? "#{current_wind_mph} MPH winds" : "a very light breeze"
+    light_wind = current_wind_mph == 0.0 ? "no wind" : "a very light breeze"
+    puts "#{current_weather} and it feels like #{current_feels_like}°F with #{wind}. | #{current_humidity} Humidity | #{precip}"
   end
 end
