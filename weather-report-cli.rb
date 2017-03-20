@@ -47,7 +47,7 @@ while(true) do
   print '> '
   new_zip = gets.chomp
 
-  break if new_zip =~ /\d{5}/ # ZIP validation
+  break if new_zip =~ /^\d{5}$/ # ZIP validation
   puts "Please try a valid, five-digit ZIP"
 end
 
