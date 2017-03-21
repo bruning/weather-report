@@ -9,10 +9,14 @@ A Ruby command-line application designed to pull data from multiple Weather Unde
 
 ### Dependencies
 
-In addition to needing an API key from Weather Underground, you must also have the following gems installed:
+In addition to needing an API key from Weather Underground, you must also have the following gem installed:
 
 * HTTParty
-* yaml
+
+```
+require 'httparty'
+```
+
 
 ## Getting Started and Running the Program
 

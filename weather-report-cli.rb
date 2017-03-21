@@ -39,7 +39,7 @@ end
 
 case report_type
   when :report_5
-    Hurricane.new().hurricanes
+    Hurricane.new.hurricanes
   else
     puts "Great! Now type a ZIP code and hit Enter"
 
@@ -61,12 +61,12 @@ case report_type
   when :report_4
     Alert.new(new_zip).alerts
   when :report_5
-    Hurricane.new().hurricanes
+    Hurricane.new.hurricanes
   when :report_6
     Report.new(new_zip).report
     Forecast.new(new_zip).forecast
     Astronomy.new(new_zip).sun_report
     Alert.new(new_zip).alerts
-    Hurricane.new().hurricanes
+    Hurricane.new.hurricanes
 end
 end
