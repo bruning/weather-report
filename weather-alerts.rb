@@ -28,7 +28,7 @@ class Alert
   end
 
   def alerts
-    number = alert_count == 1 ? "is one weather alert for #{zip}:" : "are #{hurricane_count} active weather alerts for #{zip}."
+    number = alert_count == 1 ? "is one weather alert for #{zip}:" : "are #{alert_count} active weather alerts for #{zip}."
     puts "There #{number}"
     if alert_count > 0
       (0..alert_count - 1).each do |i|
