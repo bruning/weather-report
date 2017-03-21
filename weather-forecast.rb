@@ -6,7 +6,7 @@ class Forecast
 
   MY_KEY = YAML.load_file('config.yml')['my_key']
 
-  def initialize(zip) #remove : to require ZIP
+  def initialize(zip)
     @zip = zip
   end
 

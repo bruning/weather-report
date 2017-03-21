@@ -19,6 +19,8 @@ class WeatherTest < Minitest::Test
     assert_raises(RuntimeError) {Report.new(276034)}
     assert_raises(RuntimeError) {Alert.new(2760)}
     assert_raises(RuntimeError) {Alert.new(276034)}
+    assert_raises(RuntimeError) {Astronomy.new(2760)}
+    assert_raises(RuntimeError) {Astronomy.new(276034)}
   end
 
   def test_forecast_results
@@ -27,9 +29,9 @@ class WeatherTest < Minitest::Test
     refute a.forecast10.count <= 9
   end
 
-  def test_3
+  def test_sun_times
     a = Astronomy.new(99723)
-    assert a.sunrise_hour.to_i > 0
-    assert a.sunset_hour.to_i > 0
+    assert a.sunrise_hour.to_i + a.sunset_hour.to_i >= 0
+    assert a.sunrise_hour.to_i + a.sunset_hour.to_i < 47
   end
 end

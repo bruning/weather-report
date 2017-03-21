@@ -6,7 +6,7 @@ class Alert
 
   MY_KEY = YAML.load_file('config.yml')['my_key']
 
-  def initialize(zip) #remove : to require ZIP
+  def initialize(zip)
     raise 'ZIP must be five digits' unless zip.to_s =~ /^\d{5}$/
     @zip = zip
   end

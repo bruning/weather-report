@@ -39,7 +39,7 @@ end
 
 case report_type
   when :report_5
-    Hurricane.new().hurricanes  # hurricanes don't require a zip, but this is broken
+    Hurricane.new().hurricanes
   else
     puts "Great! Now type a ZIP code and hit Enter"
 
