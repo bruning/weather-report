@@ -5,7 +5,7 @@ A Ruby command-line application designed to pull data from multiple Weather Unde
 * A ten-day forecast for a given ZIP code
 * Today's sunrise and sunset times for a given ZIP code
 * Any active weather alerts for a given ZIP code
-* Any active hurricane activity
+* Any current hurricane activity
 
 ### Dependencies
 
@@ -24,11 +24,11 @@ ruby weather-report-cli.rb
 
 You'll first be prompted to choose the report that you want.  Depending on the report you choose, you may then be prompted to enter a ZIP code.  Some good examples include:
 
-* 27701 [Automated Insights](https://automatedinsights.com/) World Headquarters
-* 10101 [Manhattan, NY](https://www.google.com/search?q=10101+zip+code)
-* 96701 [Oahu, HI](https://www.google.com/search?q=96701+zip+code)
-* 00901 [San Juan, PR](https://www.google.com/search?q=00901+zip+code)
-* 27407 [My hometown ZIP!](https://en.wikipedia.org/wiki/Greensboro,_North_Carolina)
+* 27701 - [Automated Insights World Headquarters](https://automatedinsights.com/)
+* 10101 - [Manhattan, NY](https://www.google.com/search?q=10101+zip+code)
+* 96701 - [Oahu, HI](https://www.google.com/search?q=96701+zip+code)
+* 00901 - [San Juan, PR](https://www.google.com/search?q=00901+zip+code)
+* 27407 - [My hometown ZIP Code!](https://en.wikipedia.org/wiki/Greensboro,_North_Carolina)
 
 ## Running tests
 
