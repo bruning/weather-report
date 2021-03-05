@@ -55,11 +55,11 @@ Currently, the file offers four tests and 12 assertions.
 
 ## Contributing
 
-At this stage, I don't get the sense that submitting any pull requests would be very useful.
+At this stage, we don't get the sense that submitting any pull requests would be useful.
 
 ## License
 
-This repository currently has no licenses associated with it.
+No licenses are currently associated with this repository.
 
 ## Acknowledgments
 
