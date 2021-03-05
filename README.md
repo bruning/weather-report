@@ -1,5 +1,5 @@
 # weather-report
-A Ruby command-line application designed to **(a)** pull data from multiple Weather Underground API endpoints and **(b)** present a weather report to the user.  You can choose from the following report options:
+A Ruby command-line application designed to **(a)** pull data from multiple Weather Underground API endpoints and **(b)** present a weather report to the user.  Users can choose from the following report options:
 
 * Current observations from any United States ZIP code
 * A ten-day forecast for a given ZIP code
